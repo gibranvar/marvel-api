@@ -1,0 +1,473 @@
+*{
+/* border: 1px solid greenyellow;    */
+}
+#loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: visible;
+    background: #000 url('/img/marvel-intro.gif') no-repeat center center;
+}
+
+body{
+    font-family:'Roboto', sans-serif;;
+    letter-spacing: .5px;
+    width: 100%;
+    height: 100%;
+    background-color: black ;
+}
+
+.navbar{
+    
+    background-color: #202020;
+}
+
+#nav-list{
+    font-size: 12px;    
+    padding: 500px;
+    width: 100%;
+    margin: 0;
+}
+.nav-scroller{
+    background-color: #202020;
+    width: 100%;
+}
+#nav-a{
+    background-color: #202020;
+}
+.p-2{
+    background-color: #202020;
+    color: white;
+    text-decoration: none;
+}
+.p-2:hover{
+    text-decoration: underline red;
+    color: white;
+}
+
+#search-hidden{
+    display: none;
+}
+
+#app {
+    display: block;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    padding: 20px;
+}
+
+.buscador-contenedor{
+    
+    width: 90%;
+    height: 43px;
+    border-bottom: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.buscador-contenedor:hover {
+    box-shadow: 1px 2px 3px 1px #dfe1e5;
+}
+
+#input-search {
+    font: 800 26px / 1 RobotoCondensed, "Trebuchet MS", Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+}
+
+#carusel-content{
+    height: 450px;
+    background-color: #000;
+}
+
+#carusel-block, .img{
+    height: 100%;
+}
+
+#content-series {
+    background-color: #000;
+    padding-top: 30px;
+    padding-bottom: 2px;
+    color: white;
+  }
+
+ #carusel-image{
+    opacity: 65%;
+}
+
+#carousel-image1{
+    opacity: 65%;
+
+}
+#carousel-image2{
+    opacity: 65%;
+} 
+
+h3,#content-series{
+    padding: 15px;
+}
+
+#series{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#series-title {
+    margin-top: 15px ;
+}
+
+p,#menu,#content-series {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+img.img-thumbnail {
+    width: 80%;
+    height: 80%;
+  }
+
+#comics{
+    color: white;
+    background-color: #151515;
+    width: 100%;    
+}
+
+#row-comics{
+    margin: 0;
+    font: 800 26px/1 RobotoCondensed,Trebuchet MS,Helvetica,Arial,sans-serif;
+    background-color: #151515;
+}
+
+#row-img-comic{
+    width: 935px;
+    object-fit: cover;
+    clip-path: polygon(0 0,20% 100%,100% 100%,100% 0%);
+    background-color: #151515;
+    
+}
+
+#col-img-comic{
+    background-color: #151515;
+}
+
+#contentComics{
+    background-color: #000;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-bottom: 50px;
+}
+
+.main-comic{
+    width: 100%;
+    background: #000;
+    display: grid;
+    place-items: center;
+    
+}
+#slider-comic{
+    display: flex;
+    width: 100%;
+    height: 450px;
+   
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+#slider-comic::-webkit-scrollbar{
+   display: none;
+   
+}
+.comic-container{
+   margin: 50px;
+   height: 100%;   
+}
+.comic-info {
+    color: red;
+
+}
+#img-comic{
+    margin-top: 50px;
+    height: 300px;
+    width: 250px;
+    padding: 10px;
+    object-fit: cover;
+    transition: transform 450ms;
+}
+#img-comic:hover{
+    transform: scale(1.08);
+}
+#img-app{
+    height: 270px;
+    width: 180px;
+    object-fit: cover;
+}
+#img-app:hover{
+    transform: scale(1.08);
+}
+
+#button-offer{
+    margin-top: 25px;
+    margin-left: 165px;
+}
+
+#characters{
+    width: 100%;
+    height: 400px;
+    background: url(https://terrigen-cdn-dev.marvel.com/content/prod/1x/characters_art_mas_mob_01.jpg);
+}
+#character-info p{
+  padding-top: 140px;
+    
+}
+#character-content{
+    background-color: #000;
+}
+#character-inner{
+    margin-left: 100px;
+    margin-right: 100px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.character {
+    width: 200px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color);
+    position:relative;
+    overflow: hidden;
+}
+
+.character img{
+    object-fit: cover;
+    height: 250px;
+    width:100%;
+}
+
+.chtr-info{
+    color:rgb(0, 0, 0);
+    display: flex;
+    text-align: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.chtr-info h6{
+    margin-top: 0;
+    
+}
+.overview-character h5{
+    color: red;
+}
+.overview-character{ 
+    font-size: 12px;
+    position:absolute;
+    text-align: center;
+    left:0;
+    right:0;
+    bottom:0;
+    color: #666;
+    background-color: black;
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(101%);
+    transition:transform 0.3s ease-in;
+}
+
+.character:hover .overview-character{
+    transform:translateY(0)
+}
+#events{
+
+    width: 100%;
+    background-color: #000;
+}
+#events-content{
+    margin: 20px;
+}
+#info-evnt{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#link-evnt{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: white;
+}
+#link-evnt:hover{
+    text-decoration: underline  red;
+    color: white;
+}
+
+#img-event{
+    margin-top: 20px;
+    width: auto;
+    height: 350px;
+    object-fit: cover;
+}
+
+#ftr{
+    background-color: #202020;
+    font-size: 12px;
+    color: white;
+    padding: 20px;
+
+}
+
+.social-media{
+    display: flex;
+    justify-content: space-between;
+}
+.social{
+    text-decoration: none ;
+    color: red;
+    padding-inline: 15px;
+
+}
+.terms{
+    color: #656565;
+    text-align: center;
+
+}
+
+
+
+#search-content{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.movie {
+    width: 350px;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    background-color: var(--secondary-color);
+    position:relative;
+    overflow: hidden;
+}
+
+.movie img{
+    object-fit: cover;
+    height: 400px;
+    width:100%;
+}
+
+.movie-info{
+    color:rgb(0, 0, 0);
+    display: flex;
+    text-align: center;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h6{
+    margin-top: 0;
+    
+}
+.overview h5{
+    color: red;
+}
+.overview{ 
+    font-size: 12px;
+    position:absolute;
+    text-align: center;
+    left:0;
+    right:0;
+    bottom:0;
+    color: #666;
+    background-color: black;
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(101%);
+    transition:transform 0.3s ease-in;
+}
+
+.movie:hover .overview{
+    transform:translateY(0)
+}
+
+
+
+
+.overlay {
+    
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s; 
+  }
+  
+ 
+  .overlay-content {
+    position: relative;
+    top: 10%; 
+    width: 100%;
+    text-align: center; 
+    margin-top: 30px; 
+  }
+  
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s; 
+  }
+  
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+ 
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
+
+  .know-more{
+    background-color: rgb(255, 0, 0);
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+    border:0;
+    border-radius: 15px;
+    padding: 10px 10px;
+    margin-top: 5px;
+}
