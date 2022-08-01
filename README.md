@@ -11,4 +11,4 @@ It uses the official [Marvel API](https://developer.marvel.com/docs)
 * ES6
 * CSS
 * Bootstrap
-
+* HTML
