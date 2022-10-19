@@ -9,7 +9,7 @@ const eventContent = {
         .then(res => res.json())
         .then((json) => {
         for (const evnt of json.data.results) {
-            console.log(evnt)
+            
             eventInner += `
             <div class="">
                 <div class="row g-0 overflow-hidden flex-md-row mb-4 position-relative">

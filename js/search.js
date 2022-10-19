@@ -21,9 +21,9 @@ const filter = () =>{
             let titleCmSearch = name.title.toLowerCase();
             if(titleCmSearch.indexOf(textSearch) !== -1){
                 searchContent.innerHTML += `
-            <div class="movie">
+            <div class="serie">
                     <img alt="${name.title}" src="${name.thumbnail.path}.${name.thumbnail.extension}"/>
-                    <div class="movie-info" >
+                    <div class="serie-info" >
                         <h6>${name.title}</h6>
                     </div>
                     <div class="overview">

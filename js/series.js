@@ -9,17 +9,28 @@ const seriesContent = {
         .then(res => res.json())
         .then((json) => {
         for (const series of json.data.results) {
+            let overview = ("")
+            const description = series.description
+            if(description === null)
+                { overview = `${series.startYear} - ${series.endYear}`
+            }if(description !== null){
+                overview = series.description
+            }
             serie += `
-            <div class="movie">
+            <div class="serie">
                     <img alt="${series.title}" src="${series.thumbnail.path}.${series.thumbnail.extension}"/>
-                    <div class="movie-info" >
+                    <div class="serie-info" >
                         <h6>${series.title}</h6>
                     </div>
                     <div class="overview">
                         <h5>${series.title}</h5>
-                            
-                            
-                            ${series.description}
+                        
+                        <p class="description-web">${overview}</p>
+                        
+                        <p class="description-mobile">
+                        ${series.startYear} - ${series.endYear}
+                        </p>
+                         
                         <br/> 
                         <a target="_blank" href="${series.urls[0].url}"><button class="know-more">Know More</button></a>
                     </div>
