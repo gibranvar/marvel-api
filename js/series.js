@@ -10,6 +10,10 @@ const seriesContent = {
         .then((json) => {
         for (const series of json.data.results) {
             let overview = ("")
+            let imageCover = `${series.thumbnail.path}.${series.thumbnail.extension}`
+            if(imageCover === "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"){
+                imageCover = "https://terrigen-cdn-dev.marvel.com/content/prod/1x/default/explore-no-img.jpg"
+            }
             const description = series.description
             if(description === null)
                 { overview = `${series.startYear} - ${series.endYear}`
@@ -18,7 +22,7 @@ const seriesContent = {
             }
             serie += `
             <div class="serie">
-                    <img alt="${series.title}" src="${series.thumbnail.path}.${series.thumbnail.extension}"/>
+                    <img alt="${series.title}" src="${imageCover}"/>
                     <div class="serie-info" >
                         <h6>${series.title}</h6>
                     </div>

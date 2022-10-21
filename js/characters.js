@@ -9,9 +9,14 @@ const characterContent = {
         .then(res => res.json())
         .then((json) => {
         for (const hero of json.data.results) {
+            let imageCover = `${hero.thumbnail.path}.${hero.thumbnail.extension}`
+            if(imageCover === "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg"){
+                imageCover = "https://terrigen-cdn-dev.marvel.com/content/prod/1x/default/explore-no-img.jpg"
+            }
+
             characterContent += `
             <div class="character">
-                    <img alt="${hero.name}" src="${hero.thumbnail.path}.${hero.thumbnail.extension}"/>
+                    <img alt="${hero.name}" src="${imageCover}"/>
                     <div class="chtr-info" >
                         <h6>${hero.name}</h6>
                     </div>

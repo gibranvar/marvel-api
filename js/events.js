@@ -11,9 +11,9 @@ const eventContent = {
         for (const evnt of json.data.results) {
             
             eventInner += `
-            <div class="">
-                <div class="row g-0 overflow-hidden flex-md-row mb-4 position-relative">
-                  <div class="col p-4 d-flex flex-column position-static">
+            <div class="event-container">
+                <div id="event-inner" class="row g-0 overflow-hidden flex-md-row mb-4 position-relative">
+                  <div id="event-description" class="col p-4 d-flex flex-column position-static">
                     <h3 id="info-evnt" class="mb-0 text-danger">${evnt.title}</h3>
                     <div id="info-evnt" class="mb-1 text-muted">${evnt.modified}</div>
                     <p class="card-text text-white mb-auto">T${evnt.description}</p>
