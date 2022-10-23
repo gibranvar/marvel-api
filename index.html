@@ -47,7 +47,6 @@
           </nav>
         </div>
         </header>
-        
         <!-- SEARCH -->
         <div id="search-hidden" >  
           <div class= "search-container">
@@ -99,7 +98,9 @@
               </div>
             </div>
           </div>
-        </div>  
+        </div>
+        <!-- BACK TO TOP -->
+        <button onclick="topFunction()" id="btn-top" title="Go to top">Top</button>
          <!-- MAIN -->
         <div id="app">
           <!-- CAROUSEL -->
@@ -150,7 +151,7 @@
             </button>
           </div>
           <!-- SERIES -->
-          <div id="contentSeries">
+          <div id="series">
           <div id="row-comics" class="row featurette ">
             <div id="banner-info" class="col-md-4 m-0">
               <img class="mt-5 ms-5 " src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/marvel_studios_lob_mh.png" alt="">
@@ -162,7 +163,7 @@
             </div>
           </div>
           <div id="content-series">
-                <div id="series">
+                <div id="series-container">
                 </div>
              </div>
           </div>
@@ -193,9 +194,12 @@
           </div>
           <!-- EVENTS -->
           <div id="events">
-            <div>
-              <h3 class="text-white">FEATURED EVENTS</h3>
-            </div>
+            <div id="event-banner">
+              <div id="event-banner-info">
+                <p class="lead text-center display-3 text-white">FEATURED EVENTS</p>   
+              </div>
+            </div>    
+
             <div id="events-content">
             </div>
           </div>
@@ -214,7 +218,7 @@
                   </a>
               </div>
               <div class="info-developed">
-                  <span >DESIGNED AND DEVELOPED BY GIBRAN VARGAS ©2022</span>
+                  <span >DESIGNED AND DEVELOPED BY GIBRAN VAR ©2022</span>
               </div>
           </div>
           <div class="terms">
@@ -235,7 +239,7 @@
     <script src="/js/comics.js"></script>
     <script src="/js/characters.js"></script>
     <script src="/js/events.js"></script>
-
+    <script src="/js/backtotop.js"></script>
 
 </body>
 </html>

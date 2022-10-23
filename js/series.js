@@ -3,7 +3,7 @@ const seriesContent = {
     render:() => {
         const urlSeries = 'https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=54d242a7bb0fbb74d3abf596dda41f2b&hash=7d5e2dcf861fd30bb6a5cfa9583c283c'
 
-        let series = document.querySelector("#series");
+        let series = document.querySelector("#series-container");
         let serie = '';
         fetch(urlSeries)
         .then(res => res.json())
@@ -16,7 +16,7 @@ const seriesContent = {
             }
             const description = series.description
             if(description === null)
-                { overview = `${series.startYear} - ${series.endYear}`
+                { overview = `${"<strong>PUBLISHED: </strong>"}${series.startYear}`
             }if(description !== null){
                 overview = series.description
             }
@@ -32,7 +32,8 @@ const seriesContent = {
                         <p class="description-web">${overview}</p>
                         
                         <p class="description-mobile">
-                        ${series.startYear} - ${series.endYear}
+                        <strong>PUBLISHED: </strong>
+                        ${series.startYear} 
                         </p>
                          
                         <br/> 

@@ -52,9 +52,10 @@ body {
     margin-right: 0.5rem !important;
 
 }
-#info-button{
+#info-button{ 
     background-color: transparent;
     border: 0;
+    padding: 0;
 }
 #info-button>img{
     filter: opacity(0.4) drop-shadow(0 0 0 white
@@ -244,7 +245,7 @@ h3,
   padding: 15px;
 }
 
-#series {
+#series-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -399,8 +400,17 @@ img.img-thumbnail {
 
 /* EVENTS */
 #events {
-  width: 100%;
+  width: auto;
   background-color: #000;
+}
+#event-banner {
+  width: auto;
+  height: 400px;
+  background: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackpantherwakandaforever_lob_mas_min_dsk_00.jpg") center;
+  clip-path: polygon(0 0,0 98%,100% 92%,100% 0);
+}
+#event-banner-info p {
+  padding-top: 140px;
 }
 #events-content {
   margin: 20px;
@@ -452,10 +462,49 @@ img.img-thumbnail {
     filter: opacity(0.4) drop-shadow(0 0 0 white);
 }
 
+/* BACK TO TOP */
+#btn-top {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: red 1px solid ; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  color: red; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+}
+
+#btn-top:hover {
+  background-color: red;
+  color: white;  
+}
+
 @media (max-width: 600px) {
   #app{
     margin-top: 117px;
   }
+  #btn-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 10px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: red 1px solid ; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 15px; /* Increase font size */
+  }
+  
+ 
   /* NAV */
   #nav-list {
     outline: #d81b1b;
@@ -558,10 +607,11 @@ img.img-thumbnail {
     text-align: center;
     padding: 10px;
     letter-spacing: 0.2px;
+    height: 100%;
   }
   .serie-info h6 {
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
   }
   .overview h5 {
     margin-top: 15px;
@@ -584,7 +634,7 @@ img.img-thumbnail {
     margin-bottom: 0;
     font-size: 6px;
     padding: 0;
-    margin-top: 30px;
+    margin-top: auto;
   }
 
   .serie:hover .overview {
@@ -607,7 +657,7 @@ img.img-thumbnail {
     padding: 15px;
   }
 
-  #series {
+  #series-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -746,8 +796,19 @@ img.img-thumbnail {
 
   
   /* EVENTS */
+  
 #events {
     background-color: rgb(0, 0, 0);
+  }
+#event-banner {
+    width: auto;
+    height: 400px;
+    background: url("https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackpantherwakandaforever_lob_mas_min_dsk_00.jpg") right;
+    clip-path: polygon(0 0,0 98%,100% 92%,100% 0);
+  }
+#event-banner-info p {
+    padding-top: 140px;
+
   }
   #events-content {
     margin: 10px;
@@ -775,6 +836,7 @@ img.img-thumbnail {
     margin-left: 15px;
     font-size: 10px;
     text-align: center;
+    color: white !important;
   }
   #event-description>div{
     display: none;
@@ -784,11 +846,11 @@ img.img-thumbnail {
     margin-left: 15px;
     margin-right: 15px;
     text-align: center;
-    text-decoration: none;
-    color: white;
+    text-decoration: underline;
+    color: rgb(255, 0, 0);
   }
   #link-evnt:hover {
-    text-decoration: underline red;
+    text-decoration: underline rgb(255, 255, 255);
     color: white;
   }
   
