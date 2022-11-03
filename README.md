@@ -1,5 +1,8 @@
 # MARVEL-API
 
+## Try it yourself!
+https://marve-api-demo.netlify.app/
+
 ## About
 
 This is a personal project built in my spare time for learning purposes.
